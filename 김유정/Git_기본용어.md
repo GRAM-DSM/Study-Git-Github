@@ -1,68 +1,132 @@
-# Git
-
 **※ 학습용으로 작성한 문서이므로 오류가 있을 수 있습니다.**
+
+
+
+
+
+# Git이란?
 
 -  컴퓨터 파일의 변경사항을 추적하기 위한 분산 버전 관리 시스템
 
-#### Git을 사용하는 이유
+
+
+# Github란?
+
+- 깃(Git)을 사용하는 프로젝트를 지원하는 웹호스팅 서비스
+
+
+
+# Git을 사용하는 이유
 
 - 어떠한 집합의 파일의 변경사항을 지속적으로 추적하여, 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기에 용이하다.
 
 
 
-# Git 용어
+## 기본적인 Git 용어
 
-#### 영역
+- Checksum(Hash)
 
-- **working directory**
-  - 현재 작업하고 있는 공간
-  - Git이 관리하고 있지만, 아직 track하고 있지 않은 상태
-- **index**
-  - stage 또는 staging area라고 하며, 준비 공간
-  - Git이 track하고 있으며, 버전으로 등록되기 전 상태
-- **repository**
-  - 저장소
-    - 본인 PC에 존재하는 local repository
-    - Github, Gitlab 같은 원격 저장소인 remote repository
+  - Git은 모든 데이터를 저장하기 전에 Checksum을 구하고 그 Checksum으로 데이터를 관리한다.
 
+- Clone
 
+  - .git을 포함한 remote repository의 파일들을 local repository에 복사한다.
 
-#### Flow
+- Stage
 
-- **git init**
-  - .git 폴더를 생성
-- **git add**
-  - working directory의 변경된 작업 파일을 staging area로 추가
-- **git commit**
-  - staging area의 내용을 local repository에 확정
-- **git push**
-  - local repository의 내용을 remote repository로 업로드
-- **git pull**
-  - local repository의 내용을 remote repository에서 가져옴
-- **git clone**
-  - .git을 포함한 remote repository의 파일들을 local repository에 복사
+  - 현재 수정한 파일을 곧 커밋할 것이라고 표시하는 것
 
+- local repository
 
+  - 본인 PC에 존재하는 저장소
 
-#### 협업 - 병합
+- remote repository
 
-- **git branch**
-  - 독립된 working directory를 의미
-  - 브랜치를 통해 프로젝트 참여자마다 브랜치를 가져서 독립된 작업 공간을 갖는다.
-  - 테스트 및 백업으로 사용 가능
-- **head**
-  - 포인터를 의미하며, 지금 작업하고 있는 branch를 가르킨다
-- **marge**
+  - Github, Gitlab 같은 원격 저장소
+
+- .gitignore 파일
+
+  - .gitigonre 파일은 Git이 무시할 파일들, 즉 추적하지 않을 파일들을 정의한 파일
+
+- Commit 
+
+  - 명사 :  staging area의 내용을 local repository에 확정 하는 것
+  - 동사 :  '커밋을 추가한다는 뜻입니다. 즉 현재 작업공간의 상태를 커밋으로 만들어서 저장소에 저장한다는 의미
+  - 커밋의 대략적 구조
+    - 하나의 커밋이 더해질 때는 이전 커밋에서 변경된 사항만 추가하기 때문에 커밋은 서로 연결된 체인 구조를 형성한다. 이전 커밋이 훼손되면 그 이후 커밋도 망가진다.
+  - commit message :  
+
+- branch
+
+  - 큰 줄기( master )에서 독립적인 작업 공간(branch)을 생성하는 것
+
+  - HEAD : 현시점에서 작업중인 브랜치를 가리키는 포인터 작업공간이 현재 위치해 있는 브랜치를 가리킨다.
+
+- Checkout
+
+  - 브랜치를 사용하여 어떤 작업을 수행하려면, 이 브랜치를 사용 하겠다고 명시적으로 지정해주는 것
+
+- origin
+
+  - 기본 설정된 원격 주소에 붙는 별명
+
+- Fetch
+
+  - 원격에서 업데이트된 저장소를 받아와서 로컬 저장소를 갱신하는 것
+
+- Pull
+
+  - local repository의 내용을 remote repository에서 가져온다.
+
+- Push
+
+  - local repository의 내용을 remote repository로 업로드한다.
+
+- Merge
+
   - 2개의 branch에서 작업한 다른 내용을 하나로 합치는 것을 말하며, 현재 브랜치를 기준으로 병합됨
-  - 만약 두 branch가 같은 파일의 같은 곳을 수정했다면, 충돌( merge conflict )이 발생
+  - 만약
 
+- Conflict
 
+  - Merge할 때 두 branch가 같은 파일의 같은 곳을 수정했을 때 발생하는 충돌( merge conflict )
 
+- diff
 
+  - 커밋과 커밋 사이의 변경사항을 확인하는 것
 
-##### 출처 :
+- tag
+
+  - 알아보기 쉽게 하기 위해서 커밋(commit)에 달아 주는 별명
+
+  
+
+## 기본적인 Github 용어
+
+- contribute
+  - 프로젝트에 참여하는 것
+- contributor
+  - 프로젝트에 참여하는 사람
+- issue
+  - 새로운 추가될 가능, 개선 해야할 가능, 버그 등등 모든것이 이슈라고 할 수 있다.
+- pull request
+  - 자신의 개인 저장소에서 작업한 후 이 작업을 원본 레포지토리에 반영해 달라고 요청하는 것
+- wiki
+  - repository에 프로젝트의 로드맵을 작성하고, 현재 상태를 표시하며, 소프트웨어를 문서화할 수 있는 장소를 제공한다.
+- fork
+  - 다른 사람의 저장소를 가져와 내 저장소를 만드는 기능
+- README.md
+  - 디렉토리나 압축 파일에 포함된 기타 파일에 대한 정보를 가지고 있는 파일
+  - git과 같은 저장소에서 해당 파일을 defalut로 생성하여  해당 저장소에 대한 설명을 기입하도록 하고 있다.
+- pulse
+  - 해당 프로젝트의 변화와 관심도를 보여준다.
+
+## Reference
+
+다음 링크의 문서들을 참고하여 작성하였음을 밝힙니다.
 
 https://victorydntmd.tistory.com/72?category=682764
 
 https://git-scm.com/book/ko/v1/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
 
+https://nanite.tistory.com/39
