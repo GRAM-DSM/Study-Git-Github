@@ -148,13 +148,25 @@
 ## 기본적인 Github 용어
 
 - contribute
+  - 다른 유저의 원격 저장소에서 함께 협업하는 것이다.
 - contributor
+  - 다른 유저의 원격 저장소에 협업을 요청하고 해당 사용자가 요청을 받아들였다면 `해당 저장소의 파일을 직접 수정할 수 있는 권한 `을 받게 된다.
+  - 이 권한을 받게 된 사람을 contributor라고 한다.
 - issue
+  - 요구사항, 오류 등을 관리한다.
 - pull request
+  - 협업을 위해 다른 branch를 파거나, fork 한 뒤 작업을 마쳤을 때, master branch나 원본 저장소에 변경 내용을 반영하려는 행위이다.
+  - 버그 수정이나 기능 개발 등 현재 무슨 작업을 하고 있는지 알 수 있다.
 - wiki
+  - 사전적인 정의로는 불특정 다수가 협업을 통해 직접 내용과 구조를 수정할 수 있는 웹사이트라고 한다.
+  - New-Gram에서는 개발 가이드라인을 적는 용도로 사용하는게 어떨까 제안해본다.
 - fork
+  - 다른 저장소의 contributor가 아니라도 자신의 저장소로 복제하는 기능이다.
+  - 만약 fork 뒤 원본 저장소가 변경되었다면 원본의 내용을 반영하여 pull request를 생성해야 한다.
 - README.md
+  - 새로운 저장소를 만들 때, 저장소에 대한 설명을 적는 Markdown 파일이다.
 - pulse
+  - pull request의 수, 마감되고 개설된 issue 등, 프로젝트에 대한 최근의 활동 내용을 볼 수 있다.
 
 ## Reference
 
@@ -168,9 +180,12 @@ https://heekim0719.tistory.com/3
 
 https://nanite.tistory.com/39
 
-https://yuja-kong.tistory.com/60. pull과 fetch의 차이점
+pull과 fetch의 차이점 [https://yuja-kong.tistory.com/60]
 
 https://medium.com/@joongwon/git-git-%EC%9D%98-%EA%B8%B0%EC%B4%88-a7801f45091d
 
 https://backlog.com/git-tutorial/kr/stepup/stepup2_3.html
 
+https://developer.ibm.com/kr/developer-%EA%B8%B0%EC%88%A0-%ED%8F%AC%EB%9F%BC/2018/02/05/github-collaboration/
+
+기본적인 Github 용어 [https://github.com/tadkim/infra/wiki/GitHub-::-깃허브-사용법-1]
